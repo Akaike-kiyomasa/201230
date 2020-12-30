@@ -14,85 +14,116 @@ class Item(models.Model):
 
     # サンプル項目1 文字列
     sample_1 = models.CharField(
-        verbose_name='サンプル項目1 文字列',
+        verbose_name='地域(町まで書いてね^^)',
         max_length=20,
         blank=True,
         null=True,
     )
 
     # サンプル項目2 メモ
-    sample_2 = models.TextField(
-        verbose_name='サンプル項目2 メモ',
+    sample_2 = models.CharField(
+        verbose_name='使用重量(2.5kg単位,BIG3も書けば-)',
+        max_length=20,
+        blank=True,
+        null=True,
+    )
+
+    # サンプル項目2 メモ
+    sample_3 = models.CharField(
+        verbose_name='スクワット(kg)',
+        max_length=20,
+        blank=True,
+        null=True,
+    )
+
+    # サンプル項目2 メモ
+    sample_4 = models.CharField(
+        verbose_name='デッドリフト(kg)',
+        max_length=20,
+        blank=True,
+        null=True,
+    )
+
+    # サンプル項目2 メモ
+    sample_5 = models.CharField(
+        verbose_name='ベンチプレス(kg))',
+        max_length=20,
+        blank=True,
+        null=True,
+    )
+
+    # サンプル項目1 文字列
+    sample_6 = models.CharField(
+        verbose_name='名前',
+        max_length=20,
         blank=True,
         null=True,
     )
 
     # サンプル項目3 整数
-    sample_3 = models.IntegerField(
-        verbose_name='サンプル項目3 整数',
-        blank=True,
-        null=True,
-    )
+    #sample_3 = models.IntegerField(
+    #    verbose_name='サンプル項目3 整数',
+    #    blank=True,
+    #    null=True,
+    #)
 
     # サンプル項目4 浮動小数点
-    sample_4 = models.FloatField(
-        verbose_name='サンプル項目4 浮動小数点',
-        blank=True,
-        null=True,
-    )
+    #sample_4 = models.FloatField(
+    #    verbose_name='サンプル項目4 浮動小数点',
+    #    blank=True,
+    #    null=True,
+    #)
 
     # サンプル項目5 固定小数点
-    sample_5 = models.DecimalField(
-        verbose_name='サンプル項目5 固定小数点',
-        max_digits=5,
-        decimal_places=2,
-        blank=True,
-        null=True,
-    )
+    #sample_5 = models.DecimalField(
+    #    verbose_name='サンプル項目5 固定小数点',
+    #    max_digits=5,
+    #    decimal_places=2,
+    #    blank=True,
+    #    null=True,
+    #)
 
     # サンプル項目6 ブール値
-    sample_6 = models.BooleanField(
-        verbose_name='サンプル項目6 ブール値',
-    )
+    #sample_6 = models.BooleanField(
+    #    verbose_name='サンプル項目6 ブール値',
+    #)
 
     # サンプル項目7 日付
-    sample_7 = models.DateField(
-        verbose_name='サンプル項目7 日付',
-        blank=True,
-        null=True,
-    )
+    #sample_7 = models.DateField(
+    #    verbose_name='サンプル項目7 日付',
+    #    blank=True,
+    #    null=True,
+    #)
 
     # サンプル項目8 日時
-    sample_8 = models.DateTimeField(
-        verbose_name='サンプル項目8 日時',
-        blank=True,
-        null=True,
-    )
+    #sample_8 = models.DateTimeField(
+    #    verbose_name='サンプル項目8 日時',
+    #    blank=True,
+    #    null=True,
+    #)
 
     # サンプル項目9 選択肢（固定）
     sample_9_choice = (
-        (1, '選択１'),
-        (2, '選択２'),
-        (3, '選択３'),
+        (1, 'かお'),
+        (2, 'むね'),
+        (3, 'おしり'),
     )
 
     sample_9 = models.IntegerField(
-        verbose_name='サンプル項目9_選択肢（固定）',
+        verbose_name='好きな女性の部位',
         choices=sample_9_choice,
         blank=True,
         null=True,
     )
-
     # サンプル項目9 選択肢（マスタ連動）
-    sample_10 = models.ForeignKey(
-        User,
-        verbose_name='サンプル項目10_選択肢（マスタ連動）',
-        blank=True,
-        null=True,
-        related_name='sample_10',
-        on_delete=models.SET_NULL,
-    )
-
+    #sample_10 = models.ForeignKey(
+    #    User,
+    #    verbose_name='サンプル項目10_選択肢（マスタ連動）',
+    #    blank=True,
+    #    null=True,
+    #    related_name='sample_10',
+    #    on_delete=models.SET_NULL,
+    #)
     # 以下、管理項目
 
     # 作成者(ユーザー)
